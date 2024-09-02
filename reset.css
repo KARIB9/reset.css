@@ -1,98 +1,93 @@
-/* Reset and base styles  */
+/* reset.css */
+
+/* Remove margins, paddings, and borders from all elements */
 * {
-	padding: 0px;
-	margin: 0px;
-	border: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+/* Use a more predictable box model */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-:focus,
-:active {
-	/*outline: none;*/
-}
-
-a:focus,
-a:active {
-	/* outline: none;*/
-}
-
-/* Links */
-
-a, a:link, a:visited  {
-    /* color: inherit; */
-    text-decoration: none;
-    /* display: inline-block; */
-}
-
-a:hover  {
-    /* color: inherit; */
-    text-decoration: none;
-}
-
-/* Common */
-
-aside, nav, footer, header, section, main {
-	display: block;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
-	font-weight: inherit;
-}
-
-ul, ul li {
-	list-style: none;
-}
-
-img {
-	vertical-align: top;
-}
-
-img, svg {
-	max-width: 100%;
-	height: auto;
-}
-
-/* Form */
-
-input, textarea, button, select {
-	font-family: inherit;
+/* Inherit fonts and colors */
+body, input, textarea, button, select {
+    font-family: inherit;
     font-size: inherit;
     color: inherit;
     background-color: transparent;
 }
 
-input::-ms-clear {
-	display: none;
-}
-
-button, input[type="submit"] {
-    display: inline-block;
-    box-shadow: none;
-    background-color: transparent;
-    background: none;
-    cursor: pointer;
-}
-
-input:focus, input:active,
-button:focus, button:active {
+/* Remove focus outline, but only if necessary (e.g., for buttons or links) */
+:focus {
     outline: none;
 }
 
+/* Remove default link styles */
+a, a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Set block display for main structural elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+/* Remove bullet points from lists */
+ul, ol {
+    list-style: none;
+}
+
+/* Default styles for headings and paragraphs */
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Remove spacing between table borders and cells */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set default height for images */
+img, svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Remove default button styles */
+button, input[type="submit"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remove IE-specific styles */
+input::-ms-clear {
+    display: none;
+}
+
+/* Remove inner padding from buttons in Firefox */
 button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
+    padding: 0;
+    border: 0;
 }
 
+/* Style for labels */
 label {
-	cursor: pointer;
+    cursor: pointer;
 }
 
+/* Set default behavior for legends */
 legend {
-	display: block;
+    display: block;
 }
